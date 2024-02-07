@@ -79,9 +79,11 @@ router.delete("/trainer/:trainerName", async (req, res, next) => {
 router.post("/trainer/:trainerName/pokemon", async (req, res, next) => {
   try {
     const { trainerName } = req.params;
-    const trainer = await findTrainer(trainerName);
-    if (!("name" in req.body && req.body.name.length > 0))
+    console.log(req.body);
+    if (!("name" in req.body)) {
       return res.sendStatus(400);
+    }
+    const trainer = await findTrainer(trainerName);
     const pokemon = await findPokemon(req.body.name);
     const {
       order,
