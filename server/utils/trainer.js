@@ -56,5 +56,6 @@ export const deleteTrainer = async (name) => {
       Key: `${name}.json`,
     }),
   );
+  console.log("ZIN: ${name}.json");
   return result;
 };
