@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   css: ["animate.css"],
   runtimeConfig: {
     region: "ap-northeast-1",
-    bucketName: "km-sd06-2",
+    bucketName: "",
     public: {
       backendOrigin: undefined,
     },
