@@ -7,7 +7,7 @@ const { data: trainers } = await useTrainers();
     <h1>ポケットモンスター</h1>
     <GamifyList>
       <GamifyItem v-if="trainers.length > 0">
-        <NuxtLink to="/trainer">続きから開始</NuxtLink>
+        <NuxtLink to="/trainer">つづきからはじめる</NuxtLink>
       </GamifyItem>
       <GamifyItem v-else>
         <span>Start</span>
