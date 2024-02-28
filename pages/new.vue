@@ -28,7 +28,7 @@ const { dialog, onOpen, onClose } = useDialog();
     <form @submit.prevent>
       <div class="item">
         <label for="name">名前</label>
-        <span id="name-description">特定の文字は取り除かれる</span>
+        <span id="name-description" style="background-color: blue;">特定の文字は取り除かれる</span>
         <input id="name" v-model="trainerName" aria-describedby="name-description" @keydown.enter="valid && onOpen(true)"/>
       </div>
       <GamifyButton type="button" :disabled="!valid" @click="onOpen(true)">決定</GamifyButton>
