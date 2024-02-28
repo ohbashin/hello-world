@@ -14,7 +14,7 @@ const onSubmit = async () => {
     body: JSON.stringify({
       name: safeTrainerName.value,
     }),
-  }).catch((e) => e);
+  }).catch(err => console.log(err.status));
   if (response instanceof Error) return;
   router.push(`/trainer/${safeTrainerName.value}`);
 };
